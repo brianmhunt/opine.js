@@ -57,13 +57,21 @@ Comment.prototype = {
       this.name = token.value
       this.is_complete = true
     } else {
-      throw new Error("Comment does not precede a known type.", this.opts)
+      throw new Error({
+        kind: "Error",
+        source: this.opts.source_name,
+        line: this.opts.loc.start.line,
+        col: this.opts.loc.start.column,
+        reason: "Comment does not precede something documentable"
+      })
     }
   },
   toJS: function () {
     return {
       type: this.type,
       name: this.name,
+      source: this.opts.source_name,
+      line: this.opts.loc.start.line,
       vars: this.vars
     }
   }
