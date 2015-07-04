@@ -3,7 +3,7 @@
 This converts Javascript inline comments by way of YAML into regularized data
 that can be used to generate automatic documentation.
 
-Any block comment that starts with `---` will be parsed as YAML, with
+Any block comment that starts with `---` will be parsed as [YAML](https://en.wikipedia.org/wiki/YAML), with
 the result added as `vars` to a result.
 
 For example, given
