@@ -1,0 +1,30 @@
+{
+  "name": "opine.js",
+  "version": "0.1.0",
+  "description": "Turn YAML comments from inline Javascript into documentation",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha -r chai -u bd -R list spec/*",
+    "watch": "./node_modules/mocha/bin/mocha -r chai -u bdd -R list -w spec/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/brianmhunt/opine.js.git"
+  },
+  "keywords": [
+    "javascript",
+    "jsdoc",
+    "documentation"
+  ],
+  "author": "Brian M Hunt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brianmhunt/opine.js/issues"
+  },
+  "homepage": "https://github.com/brianmhunt/opine.js#readme",
+  "dependencies": {
+    "acorn": "^2.0.4",
+    "js-yaml": "^3.3.1",
+    "lodash": "^3.10.0"
+  }
+}

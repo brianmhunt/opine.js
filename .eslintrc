@@ -1,0 +1,20 @@
+rules:
+  indent:
+    - 2
+    - 2
+  quotes: 0
+  linebreak-style:
+    - 2
+    - unix
+  semi:
+    - 2
+    - never
+  strict: 0
+  camelcase: 0
+env:
+  node: true
+globals:
+  mocha: true
+  assert: true
+  it: true
+  describe: true
