@@ -4,7 +4,7 @@
   "description": "Turn YAML comments from inline Javascript into documentation",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha -r chai -u bd -R list spec/*",
+    "test": "./node_modules/mocha/bin/mocha -r chai -u bdd -R list spec/*",
     "watch": "./node_modules/mocha/bin/mocha -r chai -u bdd -R list -w spec/*"
   },
   "repository": {
@@ -26,5 +26,9 @@
     "acorn": "^2.0.4",
     "js-yaml": "^3.3.1",
     "lodash": "^3.10.0"
+  },
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "mocha": "^2.2.5"
   }
 }
