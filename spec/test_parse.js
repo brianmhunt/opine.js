@@ -3,6 +3,7 @@
 //
 var opine = require('../index')
 var assert = require('chai').assert
+var fs = require('fs')
 
 describe("Opine", function () {
   it("sample-1 works", function () {
@@ -34,5 +35,21 @@ describe("Opine", function () {
       assert.include(e.toString(), 'line 7, col 11')
       assert.include(e.toString(), 'yaml-error.js')
     }
+  })
+
+  it("rips inline", function () {
+    var code = fs.readFileSync("./spec/fixtures/sample-2.js")
+    var result = opine.rip(code, "code-filename")
+    var expect = {
+      "line": 1,
+      "name": "y",
+      "source": "code-filename",
+      "type": "var",
+      "vars": {
+        "description": 123,
+        "params": null
+      }
+    }
+    assert.deepEqual(result.toJS()[0], expect)
   })
 })
